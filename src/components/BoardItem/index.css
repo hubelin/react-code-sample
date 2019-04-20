@@ -1,0 +1,12 @@
+.board-item {
+  height: 60px;
+  border: 1px solid;
+  margin: 5px auto;
+}
+
+.board-item__text {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+  margin-left: 12px;
+}
