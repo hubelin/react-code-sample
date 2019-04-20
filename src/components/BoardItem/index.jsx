@@ -18,8 +18,10 @@ export default class BoardItem extends PureComponent {
   render() {
     const { task } = this.props;
     return (
-      <div className="board-item">
-        <p className="board-item__text">{task}</p>
+      <div className="board-item" data-test="component-board-item">
+        <p className="board-item__text" data-test="task-display">
+          {task}
+        </p>
       </div>
     );
   }

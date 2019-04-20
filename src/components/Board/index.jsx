@@ -15,11 +15,6 @@ import './index.css';
 
 export default class Board extends Component {
   static propTypes = {
-    // board: PropTypes.arrayOf(
-    //   PropTypes.shape({
-
-    //   })
-    // )
     column: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
@@ -36,10 +31,15 @@ export default class Board extends Component {
       return <BoardItem task={task} column={column} key={Date.now() + idx} />;
     });
     return (
-      <div className="board">
+      <div className="board" data-test="board-component">
         <h1 style={style}>{name}</h1>
         {boardItems}
-        <Button onClick={() => addCard(column)}>+ Add Card</Button>
+        <Button
+          onClick={() => addCard(column)}
+          data-test="component-button-add-card"
+        >
+          + Add Card
+        </Button>
       </div>
     );
   }

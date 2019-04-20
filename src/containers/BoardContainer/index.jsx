@@ -65,6 +65,10 @@ export default class BoardContainer extends Component {
         />
       );
     });
-    return <div className="board-container">{boardList}</div>;
+    return (
+      <div className="board-container" data-test="component-board-container">
+        {boardList}
+      </div>
+    );
   }
 }
